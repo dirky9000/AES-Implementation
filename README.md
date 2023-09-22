@@ -1,5 +1,5 @@
 # Cybersecurity (ELC-470)
-## Using any language of our choice, we are to build an AES that will encrypt and decrypt a plain text using a secret key
+## Using any language of our choice, we are to build an AES that will encrypt and decrypt a plain text using a secret key. We are then also supposed to implement this in Verilog.
 
 ## Python Implementation (Dirk)
 [Here is the code for the python implementation](https://github.com/dirky9000/AES-Implementation/blob/main/python_implementation.py)
