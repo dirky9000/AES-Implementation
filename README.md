@@ -7,8 +7,14 @@
 ## C++ Implementation (Alex)
 [Here is the code for the c++ implementation](https://github.com/dirky9000/AES-Implementation/blob/main/c%2B%2B_implementation.cpp)
 
-## Supporting documents
+## Supporting documents in python 
 
 ### https://medium.com/quick-code/aes-implementation-in-python-a82f582f51c2
 
-[link about aes in verilog](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9058322&tag=1)
+## Supporting documents in verilog 
+
+[1: IEEE](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9058322&tag=1)
+
+[2: Medium](https://medium.com/@imgouravsaini/aes-algorithm-and-its-hardware-implementation-on-fpga-a-step-by-step-guide-2bef178db736)
+
+[3: Github of i think someone implemented this](https://github.com/Gourav0486/AES-Core-engine-?source=post_page-----2bef178db736--------------------------------)
