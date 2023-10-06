@@ -10,3 +10,5 @@
 ## Supporting documents
 
 ### https://medium.com/quick-code/aes-implementation-in-python-a82f582f51c2
+
+[link about aes in verilog](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9058322&tag=1)
