@@ -41,8 +41,18 @@ class AESCipher(object):
         return plain_text[:-ord(last_character)]
 
 while True:
+    # Prompt user to enter plaintext which must be 16 characters long 
+    plaintext = input("\nEnter plaintext (16 characters):      ")
+
+    # Check if plaintext length is exactly 16 characters
+    if len(plaintext) != 16:
+        print("\nPlaintext must be exactly 16 characters long.")
+    else:
+        break 
+
+while True:
     # Prompt user to enter secret key which must be 16 characters long 
-    secret_key = input("\nEnter secret key (16 characters): ")
+    secret_key = input("Enter secret key (16 characters):     ")
 
     # Check if secret key length is exactly 16 characters
     if len(secret_key) != 16:
@@ -52,16 +62,6 @@ while True:
 
 # Create an instance of AESCipher with the provided key
 cipher = AESCipher(secret_key)
-
-while True:
-    # Prompt user to enter plaintext which must be 16 characters long 
-    plaintext = input("Enter plaintext (16 characters): ")
-
-    # Check if plaintext length is exactly 16 characters
-    if len(plaintext) != 16:
-        print("\nPlaintext must be exactly 16 characters long.")
-    else:
-        break 
 
 # Encrypt the plaintext
 encrypted_text = cipher.encrypt(plaintext)
@@ -74,7 +74,7 @@ while True:
     encrypted_input = input("\nEnter encrypted text: ")
 
     # Prompt user to enter secret key for decryption
-    secret_key = input("Enter secret key for decryption: ")
+    secret_key = input("Enter secret key for decryption:      ")
 
     # Decrypt ciphertext to plaintext
     decrypted_text = cipher.decrypt(encrypted_input, secret_key)
