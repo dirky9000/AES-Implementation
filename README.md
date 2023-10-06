@@ -13,7 +13,7 @@
 
 ## Supporting documents in verilog 
 
-[1: IEEE]([https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9058322&tag=1](https://github.com/dirky9000/AES-Implementation/blob/main/Designing_of_AES_Algorithm_using_Verilog.pdf))
+[1: IEEE](https://github.com/dirky9000/AES-Implementation/blob/main/Designing_of_AES_Algorithm_using_Verilog.pdf)
 
 [2: Medium](https://medium.com/@imgouravsaini/aes-algorithm-and-its-hardware-implementation-on-fpga-a-step-by-step-guide-2bef178db736)
 
