@@ -1,21 +1,41 @@
 #-----------------------------------------------------------
-# Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri Nov  3 03:10:57 2023
-# Process ID: 17068
-# Current directory: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2792 C:\Users\Alex\Desktop\Fall 2023 Class stuff\Cyber Security\project_1\project_1.xpr
-# Log file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1/vivado.log
-# Journal file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1\vivado.jou
-# Running On: DESKTOP-BS99URK, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 8, Host memory: 34235 MB
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Nov  3 07:46:16 2023
+# Process ID: 6440
+# Current directory: H:/AES-Implementation/src/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15616 H:\AES-Implementation\src\project_1\project_1.xpr
+# Log file: H:/AES-Implementation/src/project_1/vivado.log
+# Journal file: H:/AES-Implementation/src/project_1\vivado.jou
+# Running On: ARM144-03, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34050 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1/project_1.xpr}
+open_project -part xc7a12ticsg325-1L H:/AES-Implementation/src/project_1/project_1.xpr
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+save_project_as project_v2 H:/AES-Implementation/src/project_v2 -force
 launch_simulation
+source AEStb.tcl
+close_sim
+launch_simulation
+source AEStb.tcl
+close_sim
+launch_simulation
+source AEStb.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source AEStb.tcl
+close_sim
+launch_simulation
+source AEStb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top AESmain [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
 launch_simulation
 source AEStb.tcl
 close_sim
