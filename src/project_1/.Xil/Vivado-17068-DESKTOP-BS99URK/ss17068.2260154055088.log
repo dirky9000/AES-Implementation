@@ -1,0 +1,10 @@
+srcscan starts
+srcscan: Caught exception in shared_memory linking
+srcscan exits with return value -1
+t on client versions of Windows
+#
+# An error report file with more information is saved as:
+# C:\Users\Alex\Desktop\Fall 2023 Class stuff\Cyber Security\project_1\hs_err_pid17068.log
+srcscan starts
+srcscan: Caught exception in shared_memory linking
+srcscan exits with return value -1

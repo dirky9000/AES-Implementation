@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Nov  3 03:10:57 2023
+# Process ID: 17068
+# Current directory: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2792 C:\Users\Alex\Desktop\Fall 2023 Class stuff\Cyber Security\project_1\project_1.xpr
+# Log file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1/vivado.log
+# Journal file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1\vivado.jou
+# Running On: DESKTOP-BS99URK, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 8, Host memory: 34235 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source AEStb.tcl
+close_sim
