@@ -2,79 +2,34 @@
 
 module shiftrows(
     input clk,
-    input [127:0] data,
-    output reg [127:0] dout
+    input [127:0] data_in,
+    output reg [127:0] data_out = 128'b0
 );
 
-    // Internal state for each row
-    reg [31:0] row0, row1, row2, row3;
+always @(posedge clk)
+begin
+    // First Row
+    data_out[127:120] <= data_in[95:88];
 
-    always @(posedge clk) begin
-        // Row 0: No shift
-        row0 <= data[95:64];
+    // Second Row (shifted one position to the left)
+    data_out[119:112] <= data_in[55:48];
+    data_out[111:104] <= data_in[15:8];
+    data_out[103:96]  <= data_in[103:96];
 
-        // Row 1: Shift one position to the left
-        row1 <= {data[55:32], data[31:0]};
+    // Third Row (shifted two positions to the left)
+    data_out[95:88]  <= data_in[63:56];
+    data_out[87:80]  <= data_in[23:16];
+    data_out[79:72]  <= data_in[111:104];
+    data_out[71:64]  <= data_in[71:64];
 
-        // Row 2: Shift two positions to the left
-        row2 <= {data[23:0], data[63:32]};
+    // Fourth Row (shifted three positions to the left)
+    data_out[63:56]  <= data_in[31:24];
+    data_out[55:48]  <= data_in[119:112];
+    data_out[47:40]  <= data_in[79:72];
+    data_out[39:32]  <= data_in[39:32];
 
-        // Row 3: Shift three positions to the left
-        row3 <= {data[7:0], data[39:8]};
-    end
-
-    // Concatenate the rows to form the output
-    always @* begin
-        dout = {row0, row1, row2, row3};
-    end
-
-endmodule
-
-/*
-`timescale 1ns / 1ps
-
-module tb_shiftrows();
-
-    // Inputs
-    reg clk;
-    reg [127:0] data;
-
-    // Outputs
-    wire [127:0] dout;
-
-    // Instantiate the shiftrows module
-    shiftrows uut (
-        .clk(clk),
-        .data(data),
-        .dout(dout)
-    );
-
-    // Clock generation
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;
-    end
-
-    // Stimulus generation
-    initial begin
-        // Initialize input data
-        data = 128'h0123456789ABCDEF0123456789ABCDEF;
-
-        // Apply stimulus for a few clock cycles
-        #10 data = 128'hFEDCBA9876543210FEDCBA9876543210;
-        #10 data = 128'h87654321FEDCBA9087654321FEDCBA90;
-        #10 data = 128'h45678901ABCDEF2345678901ABCDEF23;
-
-        // Add more test cases if needed
-
-        // Stop simulation
-        #10 $finish;
-    end
-
-    // Monitor to display results
-    always @(posedge clk) begin
-        $display("Time %0t: data = %h, dout = %h", $time, data, dout);
-    end
+    // Reset the remaining bits
+    data_out[31:0]   <= 128'b0;
+end
 
 endmodule
-*/
