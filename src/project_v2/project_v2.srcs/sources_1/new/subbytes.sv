@@ -3,90 +3,33 @@
 module subbytes(
     input clk,
     input [127:0] data,
-    output reg [127:0] dout
+    output reg [127:0] s_data_out
 );
 
-    // Internal state for each byte
-    reg [7:0] byte0, byte1, byte2, byte3,
-              byte4, byte5, byte6, byte7,
-              byte8, byte9, byte10, byte11,
-              byte12, byte13, byte14, byte15;
+    wire [127:0] tmp_out;
 
-    // Instantiate the sbox module for each byte
-    sbox sbox0 (.data(data[7:0]), .dout(byte0));
-    sbox sbox1 (.data(data[15:8]), .dout(byte1));
-    sbox sbox2 (.data(data[23:16]), .dout(byte2));
-    sbox sbox3 (.data(data[31:24]), .dout(byte3));
-    sbox sbox4 (.data(data[39:32]), .dout(byte4));
-    sbox sbox5 (.data(data[47:40]), .dout(byte5));
-    sbox sbox6 (.data(data[55:48]), .dout(byte6));
-    sbox sbox7 (.data(data[63:56]), .dout(byte7));
-    sbox sbox8 (.data(data[71:64]), .dout(byte8));
-    sbox sbox9 (.data(data[79:72]), .dout(byte9));
-    sbox sbox10 (.data(data[87:80]), .dout(byte10));
-    sbox sbox11 (.data(data[95:88]), .dout(byte11));
-    sbox sbox12 (.data(data[103:96]), .dout(byte12));
-    sbox sbox13 (.data(data[111:104]), .dout(byte13));
-    sbox sbox14 (.data(data[119:112]), .dout(byte14));
-    sbox sbox15 (.data(data[127:120]), .dout(byte15));
+    sbox q0(data[127:120], tmp_out[127:120]);
+    sbox q1(data[119:112], tmp_out[119:112]);
+    sbox q2(data[111:104], tmp_out[111:104]);
+    sbox q3(data[103:96], tmp_out[103:96]);
 
-    // Concatenate the bytes to form the output
-    always @* begin
-        dout = {byte0, byte1, byte2, byte3, byte4, byte5, byte6, byte7,
-                byte8, byte9, byte10, byte11, byte12, byte13, byte14, byte15};
+    sbox q4(data[95:88], tmp_out[95:88]);
+    sbox q5(data[87:80], tmp_out[87:80]);
+    sbox q6(data[79:72], tmp_out[79:72]);
+    sbox q7(data[71:64], tmp_out[71:64]);
+
+    sbox q8(data[63:56], tmp_out[63:56]);
+    sbox q9(data[55:48], tmp_out[55:48]);
+    sbox q10(data[47:40], tmp_out[47:40]);
+    sbox q11(data[39:32], tmp_out[39:32]);
+
+    sbox q12(data[31:24], tmp_out[31:24]);
+    sbox q13(data[23:16], tmp_out[23:16]);
+    sbox q14(data[15:8], tmp_out[15:8]);
+    sbox q15(data[7:0], tmp_out[7:0]);
+
+    always @(posedge clk) begin
+        s_data_out <= tmp_out;
     end
 
 endmodule
-
-/*
-`timescale 1ns / 1ps
-
-module tb_subbytes;
-
-    // Inputs
-    reg clk;
-    reg [127:0] data;
-
-    // Outputs
-    wire [127:0] dout;
-
-    // Instantiate the subbytes module
-    subbytes uut (
-        .clk(clk),
-        .data(data),
-        .dout(dout)
-    );
-
-    // Clock generation
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;
-    end
-
-    // Test stimulus
-    initial begin
-        // Initialize inputs
-        data = 128'h0123456789abcdef0123456789abcdef;
-
-        // Apply some initial delay
-        #10;
-
-        // Display initial values
-        $display("Time = %0t, Input = %h", $time, data);
-
-        // Apply stimulus and display results
-        // You can modify the data values as needed for your testing
-        // For simplicity, we're not applying a comprehensive test here
-        data = 128'h112233445566778899aabbccddeeff0;
-        #10;
-        $display("Time = %0t, Output = %h", $time, dout);
-
-        // Add more test cases as needed
-
-        // Finish the simulation after a certain time
-        #10;
-        $finish;
-    end
-
-endmodule
-*/
