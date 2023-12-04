@@ -1,8 +1,9 @@
 `timescale 1ns / 1ps
 
-module sbox(data,dout);
-	 input [7:0] data;
-	 output reg [7:0] dout;
+module sbox(
+	 input [7:0] data,
+	 output reg [7:0] dout
+);
 
 	 always@(data)
 	 begin
@@ -281,7 +282,7 @@ module sbox(data,dout);
        8'hfe              : dout <= 8'hbb;
        8'hff              : dout <= 8'h16;
        default            : dout <= 8'h00;
-endcase
-end
+    endcase
+    end
 
 endmodule
