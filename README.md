@@ -18,3 +18,5 @@
 [2: Medium](https://medium.com/@imgouravsaini/aes-algorithm-and-its-hardware-implementation-on-fpga-a-step-by-step-guide-2bef178db736)
 
 [3: Github of i think someone implemented this](https://github.com/Gourav0486/AES-Core-engine-?source=post_page-----2bef178db736--------------------------------)
+
+[4: Step by Step AES 128 so we can check if ours is working](https://www.cryptool.org/en/cto/aes-step-by-step)

@@ -1,6 +1,4 @@
-`timescale 1ns / 1ps
-
-module shiftrows(
+module shiftrows (
     input clk,
     input reset,
     input [127:0]data,
