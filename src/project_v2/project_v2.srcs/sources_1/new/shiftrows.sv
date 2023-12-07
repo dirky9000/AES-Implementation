@@ -2,34 +2,41 @@
 
 module shiftrows(
     input clk,
-    input [127:0] data_in,
-    output reg [127:0] data_out = 128'b0
-);
+    input reset,
+    input [127:0]data,
+    output logic [127:0]dout
+    );
 
-always @(posedge clk)
+// input data     |  output dout
+// b0 b4 b8  b12  |  b0  b4  b8  b12
+// b1 b5 b9  b13  |  b5  b9  b13 b1
+// b2 b6 b10 b14  |  b10 b14 b2  b6
+// b3 b7 b11 b15  |  b15 b3  b7  b11
+
+//input data  = b15_b14_b13_b12_b11_b10_b9__b8_b7_b6__b5_b4_b3__b2__b1_b0
+//output dout = b11_b6__b1__b12_b7__b2__b13_b8_b3_b14_b9_b4_b15_b10_b5_b0
+
+always_ff@(posedge clk)
 begin
-    // First Row
-    data_out[127:120] <= data_in[95:88];
-
-    // Second Row (shifted one position to the left)
-    data_out[119:112] <= data_in[55:48];
-    data_out[111:104] <= data_in[15:8];
-    data_out[103:96]  <= data_in[103:96];
-
-    // Third Row (shifted two positions to the left)
-    data_out[95:88]  <= data_in[63:56];
-    data_out[87:80]  <= data_in[23:16];
-    data_out[79:72]  <= data_in[111:104];
-    data_out[71:64]  <= data_in[71:64];
-
-    // Fourth Row (shifted three positions to the left)
-    data_out[63:56]  <= data_in[31:24];
-    data_out[55:48]  <= data_in[119:112];
-    data_out[47:40]  <= data_in[79:72];
-    data_out[39:32]  <= data_in[39:32];
-
-    // Reset the remaining bits
-    data_out[31:0]   <= 128'b0;
+    if(reset)
+        dout <= 0;
+    else
+        dout[7:0]     <= data[7:0];     //b0 <= b0
+        dout[15:8]    <= data[47:40];   //b1 <= b5
+        dout[23:16]   <= data[87:80];   //b2 <= b10
+        dout[31:24]   <= data[127:120]; //b3 <= b15
+        dout[39:32]   <= data[39:32];   //b4 <= b4
+        dout[47:40]   <= data[79:72];   //b5 <= b9
+        dout[55:48]   <= data[119:112]; //b6 <= b14
+        dout[63:56]   <= data[31:24];   //b7 <= b3    
+        dout[71:64]   <= data[71:64];   //b8 <= b8
+        dout[79:72]   <= data[111:104]; //b9 <= b13
+        dout[87:80]   <= data[23:16];   //b10 <= b2
+        dout[95:88]   <= data[63:56];   //b11 <= b7
+        dout[103:96]  <= data[103:96];  //b12 <= b12
+        dout[111:104] <= data[15:8];    //b13 <= b1
+        dout[119:112] <= data[55:48];   //b14 <= b6
+        dout[127:120] <= data[95:88];   //b15 <= b11
 end
 
 endmodule

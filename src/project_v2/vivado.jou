@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Dec  2 22:27:28 2023
+# Process ID: 19272
+# Current directory: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18256 C:\Users\Alex\Desktop\Fall 2023 Class stuff\Cyber Security\AES\AES-Implementation\src\project_v2\project_v2.xpr
+# Log file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/vivado.log
+# Journal file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2\vivado.jou
+# Running On: DESKTOP-BS99URK, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 8, Host memory: 34235 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.xpr}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 {{C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/subbytes.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESencrypt.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/shiftrows.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/sbox.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/tb_subbytes.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/inv_sbox.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/round.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv} {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/tb_shiftrows.sv}}
+update_compile_order -fileset sim_1
