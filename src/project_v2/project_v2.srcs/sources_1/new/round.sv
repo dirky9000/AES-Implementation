@@ -1,16 +1,11 @@
 `timescale 1ns / 1ps
 
-//Subbytes
-//shiftrows
-//mix columns
-//add round key
-
-
 module round(
     input clk,
+    input reset,
     input [127:0]inData,
     input [127:0]key,
-    output [127:0]outData
+    output logic [127:0]outData
     );
     
 //Subbytes
@@ -20,9 +15,9 @@ module round(
 
 logic [127:0]subOut, shiftOut, mixOut;
 
-subbytes sub(.clk(clk), .data(inData), .dout(subOut));
-shiftrows shift(.clk(clk), .data(subOut), .dout(shiftOut));
-mixcolumns mix(.clk(clk), .data(shiftOut), .dout(mixOut));
+subbytes sub(.clk(clk), .reset(reset), .data(inData), .dout(subOut));
+shiftrows shift(.clk(clk), .reset(reset), .data(subOut), .dout(shiftOut));
+mixcolumns mix(.clk(clk), .reset(reset), .data(shiftOut), .dout(mixOut));
 assign outData = key^mixOut;
 
 endmodule

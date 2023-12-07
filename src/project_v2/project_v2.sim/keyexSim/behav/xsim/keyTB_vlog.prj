@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_v2.srcs/sources_1/new/key_expand.sv" \
+"../../../../project_v2.srcs/sources_1/new/sbox.sv" \
+"../../../../project_v2.srcs/keyexSim/new/keyTB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

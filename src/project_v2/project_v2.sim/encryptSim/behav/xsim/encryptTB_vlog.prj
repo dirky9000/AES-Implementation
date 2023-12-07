@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_v2.srcs/sources_1/new/AESencrypt.sv" \
+"../../../../project_v2.srcs/sources_1/new/final_encrypt_round.sv" \
+"../../../../project_v2.srcs/sources_1/new/key_expand.sv" \
+"../../../../project_v2.srcs/sources_1/new/mixcolumns.sv" \
+"../../../../project_v2.srcs/sources_1/new/round.sv" \
+"../../../../project_v2.srcs/sources_1/new/sbox.sv" \
+"../../../../project_v2.srcs/sources_1/new/shiftrows.sv" \
+"../../../../project_v2.srcs/sources_1/new/subbytes.sv" \
+"../../../../project_v2.srcs/encryptSim/new/encryptTB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
