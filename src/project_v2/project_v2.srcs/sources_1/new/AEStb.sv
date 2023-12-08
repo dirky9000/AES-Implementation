@@ -27,7 +27,6 @@ AESmain MainBlock(
     .busy(busy)
     );
 
-
 initial begin
     clk = 0;
     while(1)
@@ -58,9 +57,8 @@ begin
         plaintextInput = "testEncryptAlexD";
         ciphertextInput = 128'h63a2dabeddb7ba72a8df33bc7aaac091;
         keyInput = "SecretKeyAlexD!!";
-        mode <= 2'b10;
+        mode <= 2'b11;
     end
 end
-
 
 endmodule
