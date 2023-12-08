@@ -3,7 +3,7 @@
 module sbox(
 	 input [7:0] data,
 	 output reg [7:0] dout
-);
+    );
 
 	 always@(data)
 	 begin

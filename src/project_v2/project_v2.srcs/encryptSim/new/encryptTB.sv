@@ -38,8 +38,8 @@ begin
         end
     else
         begin
-            plaintextHex <= 128'h74_65_73_74_45_6E_63_72_79_70_74_41_6C_65_78_44; //testEncryptAlexD
-            secretKeyHex <= 128'h53_65_63_72_65_74_4B_65_79_41_6C_65_78_44_21_21; //SecretKeyAlexD!!
+            plaintextHex <= "testEncryptAlexD";
+            secretKeyHex <= "SecretKeyAlexD!!"; 
         end
 end
 

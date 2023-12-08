@@ -12,25 +12,6 @@ module AESmain(
     output [127:0]outPlain,
     output busy
     );
-    
-//instantiate Encryption Module
-AESencrypt encrypt(
-    .plaintext(plaintext),
-    .key(key),
-    .clk(clk),
-    .reset(reset),
-    .outCipher(outCipher)
-    );
-    
-//instantiate Decryption Module
-AESdecrypt decrypt(
-    .ciphertext(ciphertext),
-    .key(key),
-    .clk(clk),
-    .reset(reset),
-    .outPlain(outPlain)
-    );
-
 
 
 endmodule

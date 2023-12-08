@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module round(
+module e_round(
     input clk,
     input reset,
     input [127:0]inData,

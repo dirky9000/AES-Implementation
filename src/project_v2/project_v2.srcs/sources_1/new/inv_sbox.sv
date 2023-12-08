@@ -1,9 +1,10 @@
 `timescale 1ns / 1ps
 
-module inv_sbox(data, dout);
-    input [7:0] data;
-    output reg [7:0] dout;
-
+module inv_sbox(
+    input [7:0] data,
+    output reg [7:0] dout
+    );
+    
     always@(data)
     begin
 

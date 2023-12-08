@@ -24,8 +24,11 @@ Compiling module xil_defaultlib.sbox
 Compiling module xil_defaultlib.key_expand
 Compiling module xil_defaultlib.subbytes
 Compiling module xil_defaultlib.shiftrows
+Compiling module xil_defaultlib.mul_2
+Compiling module xil_defaultlib.mul_3
+Compiling module xil_defaultlib.mul_32_default
 Compiling module xil_defaultlib.mixcolumns
-Compiling module xil_defaultlib.round
+Compiling module xil_defaultlib.e_round
 Compiling module xil_defaultlib.final_encrypt_round
 Compiling module xil_defaultlib.AESencrypt
 Compiling module xil_defaultlib.encryptTB

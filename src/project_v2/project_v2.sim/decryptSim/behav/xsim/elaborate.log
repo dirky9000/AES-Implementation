@@ -1,0 +1,43 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot decryptTB_behav xil_defaultlib.decryptTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:38]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:39]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:40]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:41]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:42]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:43]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:44]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:45]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:46]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:49]
+WARNING: [VRFC 10-3823] variable 'key0' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:163]
+WARNING: [VRFC 10-3823] variable 'key1' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:164]
+WARNING: [VRFC 10-3823] variable 'key2' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:165]
+WARNING: [VRFC 10-3823] variable 'key3' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:166]
+WARNING: [VRFC 10-3823] variable 'key4' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:167]
+WARNING: [VRFC 10-3823] variable 'key5' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:168]
+WARNING: [VRFC 10-3823] variable 'key6' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:169]
+WARNING: [VRFC 10-3823] variable 'key7' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:170]
+WARNING: [VRFC 10-3823] variable 'key8' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:171]
+WARNING: [VRFC 10-3823] variable 'key9' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:172]
+WARNING: [VRFC 10-3823] variable 'key10' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:173]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sbox
+Compiling module xil_defaultlib.key_expand
+Compiling module xil_defaultlib.invShiftRows
+Compiling module xil_defaultlib.inv_sbox
+Compiling module xil_defaultlib.invSubBytes
+Compiling module xil_defaultlib.d_round
+Compiling module xil_defaultlib.final_decrypt_round
+Compiling module xil_defaultlib.AESdecrypt
+Compiling module xil_defaultlib.decryptTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot decryptTB_behav
