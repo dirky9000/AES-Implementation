@@ -5,6 +5,8 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:36]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:37]
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:38]
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:39]
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:40]
@@ -12,9 +14,7 @@ WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:42]
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:43]
 WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:44]
-WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:45]
-WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:46]
-WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:49]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:47]
 WARNING: [VRFC 10-3823] variable 'key0' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:163]
 WARNING: [VRFC 10-3823] variable 'key1' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:164]
 WARNING: [VRFC 10-3823] variable 'key2' might have multiple concurrent drivers [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:165]
@@ -35,6 +35,13 @@ Compiling module xil_defaultlib.key_expand
 Compiling module xil_defaultlib.invShiftRows
 Compiling module xil_defaultlib.inv_sbox
 Compiling module xil_defaultlib.invSubBytes
+Compiling module xil_defaultlib.mul_2
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.mul_11
+Compiling module xil_defaultlib.mul_13
+Compiling module xil_defaultlib.mul_14
+Compiling module xil_defaultlib.mul_9_thru_14_default
+Compiling module xil_defaultlib.invMixColumns
 Compiling module xil_defaultlib.d_round
 Compiling module xil_defaultlib.final_decrypt_round
 Compiling module xil_defaultlib.AESdecrypt

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1/AESencrypt.tcl"
+  variable script "C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1/AEStb.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,16 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'KeysGen/key0_reg[127]/Q' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6858}  -string {{CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'KeysGen/key0_reg[126]/Q' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'KeysGen/key0_reg[125]/Q' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'KeysGen/key0_reg[124]/Q' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -string {{CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'KeysGen/key0_reg[123]/Q' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:94]}}  -suppress 
+set_msg_config  -id {Synth 8-6859}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a12ticsg325-1L
 
@@ -85,14 +95,23 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESencrypt.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/d_round.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_decrypt_round.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_encrypt_round.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invShiftRows.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invSubBytes.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/inv_sbox.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/round.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/sbox.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/shiftrows.sv}
   {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/subbytes.sv}
-  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESencrypt.sv}
+  {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -104,10 +123,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_1/project_1.srcs/utils_1/imports/synth_1/AESencrypt.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top AESencrypt -part xc7a12ticsg325-1L
+synth_design -top AEStb -part xc7a12ticsg325-1L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -117,10 +138,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef AESencrypt.dcp
+write_checkpoint -force -noxdef AEStb.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file AESencrypt_utilization_synth.rpt -pb AESencrypt_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file AEStb_utilization_synth.rpt -pb AEStb_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

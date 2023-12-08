@@ -16,6 +16,6 @@ logic [127:0]invSubOut, invShiftOut;
 
 invShiftRows invshift(.clk(clk), .reset(reset), .data(inData), .dout(invShiftOut));
 invSubBytes invsub(.clk(clk), .reset(reset), .data(invShiftOut), .dout(invSubOut));
-assign outData = invSubOut&^key;
+assign outData = invSubOut^key;
 
 endmodule

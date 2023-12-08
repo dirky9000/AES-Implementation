@@ -1,0 +1,703 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Dec  8 01:50:08 2023
+# Process ID: 5344
+# Current directory: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1
+# Command line: vivado.exe -log AEStb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AEStb.tcl
+# Log file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1/AEStb.vds
+# Journal file: C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-BS99URK, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 8, Host memory: 34235 MB
+#-----------------------------------------------------------
+source AEStb.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_1/project_1.srcs/utils_1/imports/synth_1/AESencrypt.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_1/project_1.srcs/utils_1/imports/synth_1/AESencrypt.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top AEStb -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26440
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.668 ; gain = 438.543
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10643] design contains a SystemVerilog implicit generate region [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:137]
+WARNING: [Synth 8-10744] generate block is only allowed inside a loop or conditional generate in SystemVerilog mode [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:137]
+WARNING: [Synth 8-10643] design contains a SystemVerilog implicit generate region [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:78]
+WARNING: [Synth 8-10744] generate block is only allowed inside a loop or conditional generate in SystemVerilog mode [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'AEStb' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv:3]
+WARNING: [Synth 8-6896] loop limit (65536) exceeded inside initial block, initial block items will be ignored [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv:33]
+INFO: [Synth 8-6157] synthesizing module 'AESmain' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'AESencrypt' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESencrypt.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'key_expand' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sbox' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/sbox.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/sbox.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sbox' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/sbox.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'key_expand' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/key_expand.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'e_round' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/round.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'subbytes' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/subbytes.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'subbytes' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/subbytes.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'shiftrows' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/shiftrows.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftrows' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/shiftrows.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mixcolumns' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'mul_32' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:51]
+INFO: [Synth 8-6157] synthesizing module 'mul_2' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'mul_2' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'mul_3' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'mul_3' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'mul_32' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:51]
+INFO: [Synth 8-6155] done synthesizing module 'mixcolumns' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/mixcolumns.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'e_round' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/round.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'final_encrypt_round' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_encrypt_round.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'final_encrypt_round' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_encrypt_round.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'AESencrypt' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESencrypt.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'AESdecrypt' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:3]
+WARNING: [Synth 8-7071] port 'reset' of module 'key_expand' is unconnected for instance 'KeysGen2' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:16]
+WARNING: [Synth 8-7023] instance 'KeysGen2' of module 'key_expand' has 14 connections declared, but only 13 given [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'd_round' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/d_round.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'invShiftRows' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invShiftRows.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'invShiftRows' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invShiftRows.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'invSubBytes' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invSubBytes.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'inv_sbox' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/inv_sbox.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/inv_sbox.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'inv_sbox' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/inv_sbox.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'invSubBytes' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invSubBytes.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'invMixColumns' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'mul_9_thru_14' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:98]
+INFO: [Synth 8-6157] synthesizing module 'mul_9' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'mul_9' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'mul_11' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'mul_11' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:50]
+INFO: [Synth 8-6157] synthesizing module 'mul_13' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:66]
+INFO: [Synth 8-6155] done synthesizing module 'mul_13' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:66]
+INFO: [Synth 8-6157] synthesizing module 'mul_14' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:82]
+INFO: [Synth 8-6155] done synthesizing module 'mul_14' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:82]
+INFO: [Synth 8-6155] done synthesizing module 'mul_9_thru_14' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:98]
+INFO: [Synth 8-6155] done synthesizing module 'invMixColumns' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/invMixColumns.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'd_round' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/d_round.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'final_decrypt_round' [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_decrypt_round.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'final_decrypt_round' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_decrypt_round.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'AESdecrypt' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESdecrypt.sv:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv:63]
+INFO: [Synth 8-6155] done synthesizing module 'AESmain' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'AEStb' (0#1) [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv:3]
+WARNING: [Synth 8-7137] Register start_reg_reg in module AESmain has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv:58]
+WARNING: [Synth 8-3848] Net clk in module/entity AEStb does not have driver. [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv:12]
+WARNING: [Synth 8-3848] Net clk in module/entity AEStb does not have driver. [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AEStb.sv:12]
+WARNING: [Synth 8-7129] Port reset in module invSubBytes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module invMixColumns is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module subbytes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module mixcolumns is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_1/project_1.srcs/utils_1/imports/synth_1/AESencrypt.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1163.305 ; gain = 587.180
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 22    
+	   3 Input     32 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 60    
+	   4 Input     32 Bit         XORs := 2     
+	   5 Input     32 Bit         XORs := 2     
+	   6 Input     32 Bit         XORs := 2     
+	   7 Input     32 Bit         XORs := 2     
+	   8 Input     32 Bit         XORs := 2     
+	   9 Input     32 Bit         XORs := 2     
+	  10 Input     32 Bit         XORs := 2     
+	  11 Input     32 Bit         XORs := 2     
+	  12 Input     32 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 3168  
+	   4 Input      8 Bit         XORs := 288   
++---Registers : 
+	              128 Bit    Registers := 70    
+	               32 Bit    Registers := 88    
+	                8 Bit    Registers := 2016  
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 20    
+	   3 Input  128 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 22    
+	   3 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------------+-------------------------------+---------------+----------------+
+|Module Name         | RTL Object                    | Depth x Width | Implemented As | 
++--------------------+-------------------------------+---------------+----------------+
+|sbox                | dout                          | 256x8         | LUT            | 
+|inv_sbox            | dout                          | 256x8         | LUT            | 
+|key_expand          | s3_3/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_2/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_1/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_0/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_3/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_2/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_1/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_0/dout                     | 256x8         | LUT            | 
+|key_expand          | s11_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_0/dout                    | 256x8         | LUT            | 
+|final_decrypt_round | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|final_decrypt_round | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep         | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|d_round             | invshift/dout_reg_rep_bsel    | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep      | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d3/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep      | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d2/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep      | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|AEStb               | d1/invshift/dout_reg_rep_bsel | 256x8         | Block RAM      | 
+|key_expand          | s3_3/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_2/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_1/dout                     | 256x8         | LUT            | 
+|key_expand          | s3_0/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_3/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_2/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_1/dout                     | 256x8         | LUT            | 
+|key_expand          | s7_0/dout                     | 256x8         | LUT            | 
+|key_expand          | s11_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s11_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s15_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s19_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s23_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s27_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s31_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s35_0/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_3/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_2/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_1/dout                    | 256x8         | LUT            | 
+|key_expand          | s39_0/dout                    | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub16/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub15/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub14/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub13/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub12/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub11/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub10/dout                | 256x8         | LUT            | 
+|e_round             | sub/sub9/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub8/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub7/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub6/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub5/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub4/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub3/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub2/dout                 | 256x8         | LUT            | 
+|e_round             | sub/sub1/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub16/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub15/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub14/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub13/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub12/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub11/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub10/dout                | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub9/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub8/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub7/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub6/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub5/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub4/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub3/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub2/dout                 | 256x8         | LUT            | 
+|final_encrypt_round | sub/sub1/dout                 | 256x8         | LUT            | 
++--------------------+-------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8449 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 1689.379 ; gain = 1113.254
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1689.379 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1689.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 2fe157b3
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 15 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:11 ; elapsed = 00:02:21 . Memory (MB): peak = 1689.379 ; gain = 1120.215
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.runs/synth_1/AEStb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AEStb_utilization_synth.rpt -pb AEStb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  8 01:52:36 2023...

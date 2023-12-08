@@ -15,6 +15,7 @@ module AESencrypt(
 //instantiate key_expand
 key_expand KeysGen(
     .clk(clk),
+    .reset(reset),
     .key(key),
     .key0(key0),
     .key1(key1),

@@ -13,8 +13,8 @@ AESdecrypt DecryptBlock(
     .clk(clk),
     .reset(reset),
     .key(secretKeyHex),
-    .ciphertext(ciphertextInput),
-    .outPlain(plaintextOutput)
+    .ciphertextHex(ciphertextInput),
+    .plaintextHex(plaintextOutput)
     );
 
 initial begin
