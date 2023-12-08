@@ -4,6 +4,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Alex/Desktop/Fall 20
 INFO: [VRFC 10-311] analyzing module AESencrypt
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESmain
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'decryptedOutput' is not allowed [C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/AESmain.sv:16]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/d_round.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module d_round
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Alex/Desktop/Fall 2023 Class stuff/Cyber Security/AES/AES-Implementation/src/project_v2/project_v2.srcs/sources_1/new/final_decrypt_round.sv" into library xil_defaultlib

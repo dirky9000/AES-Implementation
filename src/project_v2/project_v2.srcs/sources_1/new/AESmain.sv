@@ -1,90 +1,81 @@
 `timescale 1ns / 1ps
 
-module AESmain(clk, reset, plainText, keyIn, cypherText, cypherOut, cypherIn, mode, start, busy);
-    input clk;
-    input reset;
-    input [127:0] plainText;
-    input [127:0] keyIn;
-    input [127:0] cypherIn;
-    input [1:0] mode;
-    input start;
-    output [127:0] cypherText, cypherOut;
-    output busy;
+module AESmain(
+    input clk,
+    input reset,
+    input [127:0] plaintextInput,
+    input [127:0] key,
+    input [127:0] ciphertextInput,
+    input [1:0] mode,
+    input start,
+    output logic [127:0] encryptedOutput, 
+    output logic [127:0] decryptedOutput,
+    output logic busy
+    );
 
-    reg busy;
-    reg [127:0] cypherOut, cypherText;
-    
-    reg [127:0] intermediateCypher;
-    reg [127:0] intermediateKeyIn;
-    reg [127:0] intermediateCypherKeyIn;
-    wire [127:0] intermediateCypherOut, intermediateCypherText;
-
-    // start signal
-    reg start_reg;
-
-    
-    //AES_Encryption e0(clk, plainText, intermediateKeyIn, intermediateCypherText);
-    
-    //AES_Decryption d0(clk, intermediateCypher, intermediateCypherKeyIn, intermediateCypherOut);
+    logic [127:0] decryptedOutput, encryptedOutput, tmp_ciphertext, tmp_key, tmp_decrypt_key, tmp_decrypt_output, tmp_ciphertext_output, tmp_start;
     
 AESencrypt encrypt(
     .clk(clk),
     .reset(reset),
-    .key(intermediateKeyIn),
-    .plaintextHex(plainText),
-    .ciphertextHex(intermediateCypherText)
+    .key(tmp_key),
+    .plaintextHex(plaintextInput),
+    .ciphertextHex(tmp_ciphertext_output)
     );
 
 AESdecrypt decrypt(
     .clk(clk),
     .reset(reset),
-    .key(intermediateCypherKeyIn),
-    .ciphertextHex(intermediateCypher),
-    .plaintextHex(intermediateCypherOut)
+    .key(tmp_decrypt_key),
+    .ciphertextHex(tmp_ciphertext),
+    .plaintextHex(tmp_decrypt_output)
     );
 
-    always @(posedge clk or posedge reset or posedge start) begin
-        if (reset) begin
-            // Reset logic
-            intermediateCypher <= 128'b0;
-            intermediateKeyIn <= 128'b0;
-            intermediateCypherKeyIn <= 128'b0;
-            cypherOut <= 128'b0;
-            cypherText <= 128'b0;
-            busy <= 1'b0; 
-            
-        end else begin
-            if (start) begin
-                start_reg <= 1'b1;
+    always @(posedge clk) 
+    begin
+        if (reset) 
+        begin
+        tmp_ciphertext <= 128'b0;
+        tmp_key <= 128'b0;
+        tmp_decrypt_key <= 128'b0;
+        decryptedOutput <= 128'b0;
+        encryptedOutput <= 128'b0;
+        busy <= 1'b0; 
+        end 
+        else 
+        begin
+            if (start)
+            begin
+                tmp_start <= 1'b1;
             end
 
-            // Mode execution
-            if (start_reg) begin
+            if (tmp_start) 
+            begin
                 case (mode)
-                2'b00: begin
-                    // Only AES_Encryption
-                    intermediateCypher <= 128'b0;
-                    intermediateKeyIn <= keyIn;
-                    cypherOut <= 128'b0;
-                    cypherText <= intermediateCypherText;
-                    busy <= ~|(cypherText);
+                2'b00: 
+                begin //Encryption
+                tmp_ciphertext <= 128'b0;
+                tmp_key <= key;
+                decryptedOutput <= 128'b0;
+                encryptedOutput <= tmp_ciphertext_output;
+                busy <= ~|(encryptedOutput);
                 end
-                2'b01: begin
-                    // Only AES_Decryption
-                    intermediateCypher <= cypherIn;
-                    intermediateKeyIn <= 128'b0;
-                    intermediateCypherKeyIn <= keyIn;
-                    cypherOut <= intermediateCypherOut;
-                    busy <= ~|(cypherOut);
+                2'b01: 
+                begin //Decryption
+                tmp_ciphertext <= ciphertextInput;
+                tmp_key <= 128'b0;
+                tmp_decrypt_key <= key;
+                decryptedOutput <= tmp_decrypt_output;
+                busy <= ~|(decryptedOutput);
                 end
-                2'b10, 2'b11: begin
-                    // Both AES_Encryption and AES_Decryption
-                    cypherText <= intermediateCypherText;
-                    intermediateCypher <= cypherIn;
-                    intermediateKeyIn <= keyIn;
-                    intermediateCypherKeyIn <= keyIn;
-                    cypherOut <= intermediateCypherOut;
-                    busy <= ~|(cypherText | cypherOut);  
+                2'b10, 2'b11: 
+                begin //Both Encryption and Decryption
+                encryptedOutput <= tmp_ciphertext_output;
+                tmp_ciphertext <= ciphertextInput;
+                tmp_key <= key;
+                tmp_decrypt_key <= key;
+                decryptedOutput <= tmp_decrypt_output;
+                busy <= ~|(encryptedOutput | decryptedOutput);  
                 end
                     default: begin
                     end
@@ -92,7 +83,6 @@ AESdecrypt decrypt(
             end
         end
     end
-
 endmodule
 
 

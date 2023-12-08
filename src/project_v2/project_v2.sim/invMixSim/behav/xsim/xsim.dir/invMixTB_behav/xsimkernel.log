@@ -1,0 +1,4 @@
+Running: xsim.dir/invMixTB_behav/xsimk.exe -simmode gui -wdb invMixTB_behav.wdb -simrunnum 0 -socket 62968
+Design successfully loaded
+Design Loading Memory Usage: 7564 KB (Peak: 7564 KB)
+Design Loading CPU Usage: 62 ms

@@ -15,15 +15,15 @@ module AEStb(
     logic busy;
 
 AESmain MainBlock(
-    .plainText(plaintextInput),
-    .cypherIn(ciphertextInput),
-    .keyIn(keyInput),
-    .mode(mode),
     .clk(clk),
     .reset(reset),
+    .plaintextInput(plaintextInput),
+    .key(keyInput),
+    .ciphertextInput(ciphertextInput),
+    .mode(mode),
     .start(start),
-    .cypherText(outCipher),
-    .cypherOut(outPlain),
+    .encryptedOutput(outCipher),
+    .decryptedOutput(outPlain),
     .busy(busy)
     );
 
